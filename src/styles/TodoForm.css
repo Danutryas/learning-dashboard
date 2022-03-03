@@ -1,0 +1,35 @@
+.todo-form {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form-input {
+  display: flex;
+}
+.form-input input[type="text"] {
+  height: 40px;
+  width: 400px;
+  border: 1px;
+  border-style: solid none solid solid;
+}
+
+.form-input button {
+  height: 40px;
+  width: 40px;
+  border: 1px;
+  border-style: solid solid solid none;
+}
+.form-input button:active {
+  border-style: solid solid solid none;
+  border-color: blue;
+  outline: blue;
+}
+
+.todo-list-filter select {
+  height: 40px;
+  width: 120px;
+  padding: 5px;
+}
+
+/*  */

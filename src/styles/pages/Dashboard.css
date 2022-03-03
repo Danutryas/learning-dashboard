@@ -1,0 +1,53 @@
+.dashboard {
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr;
+  gap: 10px;
+  margin: 50px auto;
+}
+.side-bar {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  border: 1px solid black;
+}
+.header {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border: 1px solid black;
+}
+.content {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border: 1px solid black;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+}
+.content-left h1 {
+  border-bottom: 1px solid black;
+  width: max-content;
+  margin: 0 auto 30px auto;
+}
+
+.content-left {
+  grid-row-start: 1;
+  gap: 50px ;
+  flex-direction: column;
+  display: flex;
+  grid-row-end: span 2;
+  border: 1px solid black;
+  text-align: center;
+  padding: 20px;
+}
+.content-right {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  border: 1px solid black;
+  padding: 30px;
+}
