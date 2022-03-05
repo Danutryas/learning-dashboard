@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/todo.css";
+import "../../styles/pages/css/TodoComponent.css";
 
 function Todo({ text, todo, setTodos, todos , complete}) {
   const deleteButton = () => {

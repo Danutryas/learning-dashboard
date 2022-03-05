@@ -1,0 +1,205 @@
+.todo-app {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 150px 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 150px 1fr / 1fr 1fr;
+  margin: 10px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 25px;
+}
+
+.todo-app h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.todo-app .todo-form {
+  border-radius: 25px;
+  background-color: #fdf2ff;
+  padding: 0px 20px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.todo-app .todo-form .form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.todo-app .todo-form .form-input input[type="text"] {
+  height: 40px;
+  width: 350px;
+  border: 2px solid black;
+  border-style: solid none solid solid;
+}
+
+.todo-app .todo-form .form-input input[type="submit"] {
+  height: 40px;
+  width: 40px;
+  border: 2px;
+  border-style: solid solid solid none;
+}
+
+.todo-app .todo-form .form-input input[type="submit"]:active {
+  border-style: solid solid solid none;
+  border-color: blue;
+  outline: blue;
+}
+
+.todo-app .todo-progress {
+  border-radius: 25px;
+  background-color: #ecf9ff;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.todo-app .todo-progress .circular-Bar {
+  display: block;
+  max-width: 100%;
+  max-height: 125px;
+}
+
+.todo-app .todo-progress .circular-Bar .circular-bg {
+  fill: none;
+}
+
+.todo-app .todo-progress .circular-Bar .circle {
+  fill: none;
+}
+
+.todo-app .todo-progress .circular-Bar .persentage {
+  font-size: 1.3rem;
+  text-anchor: middle;
+  fill: #000;
+  font-weight: bold;
+}
+
+.todo-app .todo-list {
+  border-radius: 25px;
+  background-color: #1E1826;
+  padding: 10px 20px 20px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todo-app .todo-list .list-component {
+  list-style: none;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  height: 300px;
+}
+
+.todo-app .todo-list .list-component::-webkit-scrollbar-track {
+  background: #1f2029;
+}
+
+.todo-app .todo-list .list-component::-webkit-scrollbar-thumb {
+  background-color: #f1c40f;
+  border-radius: 6px;
+  border: 3px solid #f1c40f;
+}
+
+.todo-app .todo-list .list-component .todo {
+  height: 50px;
+  border: 2px solid #f1c40f;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 10px 20px 15px;
+  border-radius: 10px;
+  background-color: #275a57;
+  color: #f1c40f;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.todo-app .todo-list .list-component .todo .todo-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.todo-app .todo-list .list-component .todo button {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: 2px solid #f1c40f;
+  color: #f1c40f;
+  background-color: #1f2029;
+}
+
+.todo-app .todo-list .todo-list-filter {
+  margin: 10px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.todo-app .todo-list .todo-list-filter select {
+  background-color: #1f2029;
+  color: #f1c40f;
+  border: 2px solid #f1c40f;
+  height: 30px;
+  width: 120px;
+  padding: 5px;
+}
+/*# sourceMappingURL=TodoComponent.css.map */

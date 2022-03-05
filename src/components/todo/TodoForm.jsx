@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TodoForm.css";
+import "../../styles/pages/css/TodoComponent.css";
 
 const TodoForm = ({ setInputText, setTodos, inputText, todos, setStatus, }) => {
   const inputTextHandler = (e) => {
@@ -12,24 +12,17 @@ const TodoForm = ({ setInputText, setTodos, inputText, todos, setStatus, }) => {
     ]);
     setInputText("");
   };
-  const statusHandler = (e) => {
-    setStatus(e.target.value)
-  }
+
 
   return (
-    <div className="todo-form">
+    <>
+      <h3>Todo List</h3>
       <div className="form-input">
         <input type="text" onChange={inputTextHandler} value={inputText} />
-        <button onClick={submitTodoHandler}>+</button>
+        <input type={"submit"} onClick={submitTodoHandler} value="+" />
       </div>
-      <div className="todo-list-filter">
-        <select onChange={statusHandler} name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
-      </div>
-    </div>
+
+    </>
   );
 };
 
