@@ -1,5 +1,4 @@
 import React from 'react';
-import "../../styles/pages/css/TodoComponent.css";
 import Todo from './Todo';
 
 const TodoList = ({ todos, setTodos, filteredTodos, setStatus }) => {
@@ -10,9 +9,9 @@ const TodoList = ({ todos, setTodos, filteredTodos, setStatus }) => {
     <>
       <div className="todo-list-filter">
         <select onChange={statusHandler} name="todos" className="filter-todo">
+          <option value="uncompleted">Uncompleted</option>
           <option value="all">All</option>
           <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
         </select>
       </div>
       <ul className="list-component">

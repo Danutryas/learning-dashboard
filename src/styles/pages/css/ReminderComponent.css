@@ -1,0 +1,175 @@
+.reminder-app {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr / 1fr 1fr;
+  height: 80%;
+  gap: 20px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.reminder-app h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.reminder-app .reminder-form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 25px;
+  background-color: #fdf8ff;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px 2px #888888;
+          box-shadow: 0px 0px 15px 2px #888888;
+  gap: 40px;
+}
+
+.reminder-app .reminder-form .reminder-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reminder-app .reminder-form .reminder-input input {
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.reminder-app .reminder-form .reminder-input input[type="text"] {
+  width: 350px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.reminder-app .reminder-form .reminder-input input[type="button"] {
+  margin: 0 auto;
+  height: 40px;
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid black;
+  letter-spacing: 1px;
+}
+
+.reminder-app .reminder-form .reminder-input .time-form {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.reminder-app .reminder-form .reminder-input .time-form input {
+  border-radius: 5px;
+  width: 160px;
+}
+
+.reminder-app .reminder-form .reminder-input .time-form input[type="date"] {
+  height: 30px;
+}
+
+.reminder-app .reminder-form .reminder-input .time-form input[type="time"] {
+  height: 30px;
+}
+
+.reminder-app .reminder-list {
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 25px;
+  background-color: #fdf8ff;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 15px 2px #888888;
+          box-shadow: 0px 0px 15px 2px #888888;
+  height: 100%;
+}
+
+.reminder-app .reminder-list .reminder-list-component {
+  overflow-y: auto;
+  display: -ms-grid;
+  display: grid;
+  height: 210px;
+  width: 100%;
+  gap: 10px;
+  -ms-grid-rows: 100px 100px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 100px 100px /1fr 1fr;
+  padding-right: 40px;
+  margin-right: -40px;
+}
+
+.reminder-app .reminder-list .reminder-list-component .reminder {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 100px;
+}
+
+.reminder-app .reminder-list .reminder-list-component .reminder .reminder-item {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.reminder-app .reminder-list .reminder-list-component .reminder .reminder-item .reminder-item-name {
+  font-weight: 600;
+  font-size: 18px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.reminder-app .reminder-list .reminder-list-component .reminder .reminder-item .reminder-item-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.reminder-app .reminder-list .reminder-list-component .reminder .reminder-button {
+  margin-top: 5px;
+}
+
+.reminder-app .reminder-list .reminder-list-component .reminder .reminder-button button {
+  height: 25px;
+  width: 25px;
+}
+/*# sourceMappingURL=ReminderComponent.css.map */

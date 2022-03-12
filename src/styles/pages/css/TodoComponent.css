@@ -4,9 +4,9 @@
   -ms-grid-rows: 150px 1fr;
   -ms-grid-columns: 1fr 1fr;
       grid-template: 150px 1fr / 1fr 1fr;
+  gap: 20px;
   margin: 10px;
   padding: 20px;
-  gap: 20px;
   border-radius: 25px;
 }
 
@@ -17,8 +17,10 @@
 
 .todo-app .todo-form {
   border-radius: 25px;
-  background-color: #fdf2ff;
+  background-color: #fdf8ff;
   padding: 0px 20px 20px 20px;
+  -webkit-box-shadow: 0px 0px 15px 2px #888888;
+          box-shadow: 0px 0px 15px 2px #888888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,31 +48,47 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  gap: 5px;
+}
+
+.todo-app .todo-form .form-input input {
+  border-radius: 10px;
 }
 
 .todo-app .todo-form .form-input input[type="text"] {
+  padding: 5px;
   height: 40px;
   width: 350px;
   border: 2px solid black;
-  border-style: solid none solid solid;
+  font-size: .7em;
+}
+
+.todo-app .todo-form .form-input input[type="text"]:focus {
+  color: #f1c40f;
+  font-weight: 600;
+  outline: none;
+  border: 3px solid #f1c40f;
+  background-color: #1f2029;
 }
 
 .todo-app .todo-form .form-input input[type="submit"] {
   height: 40px;
   width: 40px;
   border: 2px;
-  border-style: solid solid solid none;
+  border: 2px solid black;
+  font-size: 30px;
 }
 
 .todo-app .todo-form .form-input input[type="submit"]:active {
-  border-style: solid solid solid none;
   border-color: blue;
   outline: blue;
 }
 
 .todo-app .todo-progress {
   border-radius: 25px;
-  background-color: #ecf9ff;
+  -webkit-box-shadow: 0px 0px 15px 2px #888888;
+          box-shadow: 0px 0px 15px 2px #888888;
+  background-color: #fdf8ff;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,7 +129,9 @@
 
 .todo-app .todo-list {
   border-radius: 25px;
-  background-color: #1E1826;
+  -webkit-box-shadow: 0px 0px 15px 2px #888888;
+          box-shadow: 0px 0px 15px 2px #888888;
+  background-color: #fdf8ff;
   padding: 10px 20px 20px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -134,10 +154,16 @@
   overflow-y: auto;
   scrollbar-width: thin;
   height: 300px;
+  padding-right: 20px;
+  margin-right: -20px;
+}
+
+.todo-app .todo-list .list-component::-webkit-scrollbar {
+  width: 5px;
 }
 
 .todo-app .todo-list .list-component::-webkit-scrollbar-track {
-  background: #1f2029;
+  background: #41424d;
 }
 
 .todo-app .todo-list .list-component::-webkit-scrollbar-thumb {

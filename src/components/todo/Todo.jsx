@@ -1,5 +1,4 @@
 import React from "react";
-import "../../styles/pages/css/TodoComponent.css";
 
 function Todo({ text, todo, setTodos, todos , complete}) {
   const deleteButton = () => {
@@ -9,7 +8,7 @@ function Todo({ text, todo, setTodos, todos , complete}) {
   const completeButton = () => {
     setTodos(
       todos.map((item) => {
-        if (item.id == todo.id) {
+        if (item.id === todo.id) {
           return {
             ...item,
             completed: !item.completed,

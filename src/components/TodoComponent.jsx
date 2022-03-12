@@ -7,7 +7,7 @@ import TodoProgress from "./todo/TodoProgress";
 function TodoComponent() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState("all");
+  const [status, setStatus] = useState("uncompleted");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {

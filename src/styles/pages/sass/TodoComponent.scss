@@ -1,9 +1,9 @@
 .todo-app {
   display: grid;
   grid-template: 150px 1fr / 1fr 1fr;
+  gap: 20px;
   margin: 10px;
   padding: 20px;
-  gap: 20px;
   border-radius: 25px;
 
   h3 {
@@ -13,8 +13,9 @@
   }
   .todo-form {
     border-radius: 25px;
-    background-color: #fdf2ff;
+    background-color: #fdf8ff;
     padding: 0px 20px 20px 20px;
+    box-shadow: 0px 0px 15px 2px #888888;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,24 +26,36 @@
     .form-input {
       display: flex;
       height: max-content;
-
-      input[type="text"] {
-        // input field
-        height: 40px;
-        width: 350px;
-        border: 2px solid black;
-        border-style: solid none solid solid;
-      }
-      input[type="submit"] {
-        // submit button
-        height: 40px;
-        width: 40px;
-        border: 2px;
-        border-style: solid solid solid none;
-        &:active {
-          border-style: solid solid solid none;
-          border-color: blue;
-          outline: blue;
+      gap: 5px;
+      input{
+        border-radius: 10px;
+        &[type="text"] {
+          // input field
+          padding: 5px;
+          height: 40px;
+          width: 350px;
+          border: 2px solid black;
+          font-size: .7em;
+          // letter-spacing: 1px;
+          &:focus {
+            color: #f1c40f;
+            font-weight: 600;
+            outline: none;
+            border: 3px solid #f1c40f;
+            background-color: #1f2029;
+          }
+        }
+        &[type="submit"] {
+          // submit button
+          height: 40px;
+          width: 40px;
+          border: 2px;
+          border: 2px solid black;
+          font-size: 30px;
+          &:active {
+            border-color: blue;
+            outline: blue;
+          }
         }
       }
     }
@@ -50,7 +63,8 @@
 
   .todo-progress {
     border-radius: 25px;
-    background-color: #ecf9ff;
+    box-shadow: 0px 0px 15px 2px #888888;
+    background-color: #fdf8ff;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -79,7 +93,8 @@
 
   .todo-list {
     border-radius: 25px;
-    background-color: #1E1826;
+    box-shadow: 0px 0px 15px 2px #888888;
+    background-color: #fdf8ff;
     padding: 10px 20px 20px;
     grid-row: 1/3;
     grid-column: 2/3;
@@ -92,8 +107,14 @@
       overflow-y: auto;
       scrollbar-width: thin;
       height: 300px;
+      padding-right: 20px;
+      margin-right: -20px;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
       &::-webkit-scrollbar-track {
-        background: #1f2029;
+        background: #41424d;
       }
       &::-webkit-scrollbar-thumb {
         background-color: #f1c40f;
@@ -144,7 +165,6 @@
       justify-content: flex-end;
       select {
         background-color: #1f2029;
-
         color: #f1c40f;
         border: 2px solid #f1c40f;
         height: 30px;

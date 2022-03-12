@@ -1,0 +1,32 @@
+@import "./colors";
+
+.content-header {
+    display: flex;
+    gap: 50px;
+    &-logo {
+      width: 75px;
+      min-width: 75px;
+      height: 75px;
+      background-color: $c-modal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+    }
+    &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        h2 {
+            font-size: 32px;
+            line-height: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        p {
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+  }

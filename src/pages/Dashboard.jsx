@@ -1,23 +1,25 @@
+import MusicPlayer from "../components/MusicPlayer";
+import ReminderComponent from "../components/ReminderComponent";
+import SideBarComponent from "../components/SideBarComponent";
 import TodoComponent from "../components/TodoComponent";
 import "../styles/pages/css/Dashboard.css";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import DashboardComponent from "../components/DashboardComponent";
 
 const DashboardPage = () => {
   return (
-    <>
-      <div className="dashboard">
-        <div className="side-bar">Sidebar</div>
-        <div className="header">Header</div>
-        <div className="content">
-          <div className="content-left">
-            <div className="content-left-top">
-              <TodoComponent />
-            </div>
-            <div className="content-left-bottom">Content 1 left-bot</div>
-          </div>
-          <div className="content-right">Content 2</div>
-        </div>
+    <Router>
+      <SideBarComponent />
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" />} />
+          <Route path="/dashboard" exact element={<DashboardComponent />} />
+          <Route path="/todo" exact element={<TodoComponent />} />
+          <Route path="/reminder" exact element={<ReminderComponent />} />
+          <Route path="/music" exact element={<MusicPlayer />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 };
 

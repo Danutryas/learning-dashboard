@@ -1,0 +1,50 @@
+.content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+.content-header-logo {
+  width: 75px;
+  min-width: 75px;
+  height: 75px;
+  background-color: #3d4a68;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+}
+
+.content-header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.content-header-text h2 {
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.content-header-text p {
+  font-size: 22px;
+  font-weight: 500;
+}
+/*# sourceMappingURL=TitleComponent.css.map */
