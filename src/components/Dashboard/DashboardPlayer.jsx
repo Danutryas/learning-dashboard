@@ -1,18 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import PlayerControls from "./PlayerControls";
-import PlayerDetails from "./PlayerDetails";
+import PlayerControls from "../MusicPlayer/PlayerControls";
 import "../../styles/pages/css/MusicPlayerComponent.css";
+import AudioControls from "./AudioControls";
 
-
-
-function Player({
-  songs,
-  currentSongIndex,
-  setCurrentSongIndex,
-}) {
+function DashboardPlayer({ songs, currentSongIndex, setCurrentSongIndex }) {
   const audioEl = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
   useEffect(() => {
     if (isPlaying) {
       audioEl.current.play();
@@ -41,12 +34,20 @@ function Player({
         return temp;
       });
     }
+    setIsPlaying(true);
   };
-
   return (
     <div className="c-player">
-      <audio src={songs[currentSongIndex].src} ref={audioEl}></audio>
-      <PlayerDetails song={songs[currentSongIndex]} />
+      <AudioControls
+        songs={songs}
+        currentSongIndex={currentSongIndex}
+        setCurrentSongIndex={setCurrentSongIndex}
+        audioEl={audioEl}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        skipSong={skipSong}
+        
+      />
       <PlayerControls
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
@@ -56,4 +57,4 @@ function Player({
   );
 }
 
-export default Player;
+export default DashboardPlayer;

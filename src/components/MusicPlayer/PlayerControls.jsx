@@ -13,13 +13,13 @@ function PlayerControls({ skipSong, setIsPlaying, isPlaying }) {
   return (
     <div className="c-player--controls">
       <button className="skip-btn" onClick={() => skipSong(false)}>
-        <FontAwesomeIcon icon={faBackward} />
+        <FontAwesomeIcon icon={faBackward} size="lg" />
       </button>
       <button className="skip-btn" onClick={() => setIsPlaying(!isPlaying)}>
-        <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} />
+        <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size="lg" />
       </button>
       <button className="skip-btn" onClick={() => skipSong()}>
-        <FontAwesomeIcon icon={faForward} />
+        <FontAwesomeIcon icon={faForward} size="lg" />
       </button>
     </div>
   );

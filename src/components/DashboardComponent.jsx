@@ -4,6 +4,7 @@ import DashboardReminder from "./Dashboard/DashboardReminder";
 import TitleComponent from "./TitleComponent"
 import { faWaveSquare } from "@fortawesome/free-solid-svg-icons";
 import '../styles/pages/css/DashboardComponent.css'
+import DashboardMusic from "./Dashboard/DashboardMusic";
 
 function DashboardComponent() {
   return (
@@ -19,10 +20,10 @@ function DashboardComponent() {
       <div className="small-box">
         <DashboardTodo />
         <DashboardReminder />
-        {/* <DashboardReminder /> */}
+        <DashboardReminder />
       </div>
       <div className="big-box">
-        yeay
+        <DashboardMusic />
       </div>
     </div>
   );

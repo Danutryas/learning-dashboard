@@ -43,7 +43,6 @@ function DashboardReminder() {
 
   return (
     <div className={`reminder-Dashboard`}>
-      {console.log(reminders)}
       <div className="card-header">
         <h3 className="card-title">reminder</h3>
         <Link to="/reminder">
