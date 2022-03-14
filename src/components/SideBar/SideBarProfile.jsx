@@ -6,7 +6,7 @@ function SideBarProfile({sideBarState}) {
     return (
     <div className="profile">
       <img src="./assets/image/profile.png" alt="profile-pict" />
-      <h3 className="profile-name">{sideBarState ? "Danu Tryas Pristowo" : "DANU"}</h3>
+      <h3 className="profile-name">{sideBarState ? "Danu Tryas" : "DANU"}</h3>
       <button>SIGN OUT</button>
     </div>
   );
