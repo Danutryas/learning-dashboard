@@ -1,37 +1,12 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/pages/css/ReminderComponent.css";
 import ReminderForm from "./Reminder/ReminderForm";
 import ReminderList from "./Reminder/ReminderList";
 
-function ReminderComponent() {
-    const [nameInput, setNameInput] = useState("");
-    const [dateInput, setDateInput] = useState("");
-    const [timeInput, setTimeInput] = useState("");
-    const [reminders,setReminders]= useState([])
-
-
-  useEffect(() => {
-    getLocalReminders();
-  }, []);
-
-  useEffect(() => {
-    saveLocalReminders();
-  }, [reminders]);
-
-  const saveLocalReminders = () => {
-    localStorage.setItem("reminders", JSON.stringify(reminders));
-  };
-  const getLocalReminders = () => {
-    if (localStorage.getItem("reminders") === null) {
-      localStorage.setItem("reminders", JSON.stringify([]));
-    } else {
-      let reminderLocal = JSON.parse(localStorage.getItem("reminders"));
-      setReminders(reminderLocal);
-    }
-  };
-
-
-
+function ReminderComponent({ reminders, setReminders }) {
+  const [nameInput, setNameInput] = useState("");
+  const [dateInput, setDateInput] = useState("");
+  const [timeInput, setTimeInput] = useState("");
   return (
     <div className="reminder-app">
       <div className="reminder-form">
@@ -45,7 +20,7 @@ function ReminderComponent() {
           setDateInput={setDateInput}
           setTimeInput={setTimeInput}
           setReminders={setReminders}
-          />
+        />
       </div>
       <div className="reminder-list">
         <h3>Reminder List</h3>
@@ -55,7 +30,7 @@ function ReminderComponent() {
           timeInput={timeInput}
           reminders={reminders}
           setReminders={setReminders}
-          />
+        />
       </div>
     </div>
   );

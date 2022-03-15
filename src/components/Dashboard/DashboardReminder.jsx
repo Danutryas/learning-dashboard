@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
@@ -6,39 +6,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-function DashboardReminder() {
-  const [reminders, setReminders] = useState([]);
-  const [filteredReminders, setFilteredReminders] = useState([]);
+function DashboardReminder({ reminders, setReminders,filteredReminders}) {
+  const reminderRender = filteredReminders[0];
 
-  const reminder = filteredReminders[0];
-
-  // useEffect
-  useEffect(() => {
-    localGet();
-  }, [setReminders]);
-
-  useEffect(() => {
-    // localsave
-    localSave()
-    setFilteredReminders(reminders.filter((el) => el.completed === false));
-  }, [reminders, setFilteredReminders]);
-
-  // get data from database
-
-  const localSave = () => {
-    localStorage.setItem("reminders", JSON.stringify(reminders));
-  };
-
-  const localGet = () => {
-    if (localStorage.getItem("reminders") === null) {
-      localStorage.setItem("reminders", JSON.stringify([]));
-    } else {
-      let reminderLocal = JSON.parse(localStorage.getItem("reminders"));
-      setReminders(reminderLocal);
-    }
-  };
   const completeButton = () => {
-    setReminders(reminders.filter((el) => el.id !== reminder.id));
+    setReminders(reminders.filter((el) => el.id !== reminderRender.id));
   };
 
   return (
@@ -53,9 +25,9 @@ function DashboardReminder() {
       </div>
       <div className="reminder-status ">
         <p className="card-text">Up Coming reminder</p>
-        {reminder !== undefined ? (
+        {reminderRender !== undefined ? (
           <div>
-            <p>{reminder.text}</p>
+            <p>{reminderRender.text}</p>
             <button onClick={completeButton}>
               <FontAwesomeIcon
                 icon={faCircleCheck}

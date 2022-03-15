@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
@@ -6,31 +6,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-function DashboardTodo() {
-  const [todos, setTodos] = useState([]);
-  const [filteredTodos, setFilteredTodos] = useState([]);
-
+function DashboardTodo({ todos, setTodos, filteredTodos,}) {
   const todo = filteredTodos[0];
 
-  useEffect(() => {
-    localGet();
-  }, [setFilteredTodos]);
-
-  useEffect(() => {
-    // localSave
-    localStorage.setItem("todos", JSON.stringify(todos));
-    setFilteredTodos(todos.filter((todo) => todo.completed === false));
-  }, [todos, setFilteredTodos]);
-
-
-  const localGet = () => {
-    if (localStorage.getItem("todos") === null) {
-      localStorage.setItem("todos", JSON.stringify([]));
-    } else {
-      let todoLocal = JSON.parse(localStorage.getItem("todos"));
-      setTodos(todoLocal);
-    }
-  };
   const completeButton = () => {
     setTodos(
       todos.map((item) => {
@@ -60,7 +38,11 @@ function DashboardTodo() {
           <div>
             <p>{todo.text}</p>
             <button onClick={completeButton}>
-              <FontAwesomeIcon icon={faCircleCheck} size="2xl" style={{color:  "#87B87F"}}/>
+              <FontAwesomeIcon
+                icon={faCircleCheck}
+                size="2xl"
+                style={{ color: "#87B87F" }}
+              />
             </button>
           </div>
         ) : (

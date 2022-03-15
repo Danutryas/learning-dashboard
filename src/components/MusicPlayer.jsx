@@ -87,9 +87,6 @@ const MusicPlayer = () => {
 
   return (
     <div className="music">
-      <MusicSearch songs={songs}userInput={userInput} setUserInput={setUserInput} />
-      <SearchResult songs={songs} userInput={userInput} />
-      {/* <Playlist songs={songs}/> */}
       <Player
         currentSongIndex={currentSongIndex}
         setCurrentSongIndex={setCurrentSongIndex}

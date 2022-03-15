@@ -24,8 +24,8 @@ const TodoForm = ({ setInputText, setTodos, inputText, todos }) => {
   }
 
   return (
-    <>
-      <h3>Todo List</h3>
+    <div className="todo-form">
+      <h3>Todo Form</h3>
       <div className="form-input">
         <input
           type="text"
@@ -35,7 +35,7 @@ const TodoForm = ({ setInputText, setTodos, inputText, todos }) => {
         />
         <input type={"submit"} onClick={submitTodoHandler} value="+" />
       </div>
-    </>
+    </div>
   );
 };
 
