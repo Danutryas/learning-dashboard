@@ -3,8 +3,8 @@ button {
 }
 
 .side-bar {
-  width: 300px;
-  height: 100%;
+  width: 250px;
+  height: calc(100% - 120px);
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 25px;
+  padding: 20px 15px;
   gap: 40px;
   height: 60px;
   border-bottom: 1px solid #e1e1e1;
@@ -49,22 +49,34 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.side-bar .profile img {
+.side-bar .profile .identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.side-bar .profile .identity img {
   height: 100px;
   width: 100px;
   border-radius: 50px;
   border: 2px solid #e1e1e1;
-  border-collapse: separate;
-  border-spacing: 2px;
 }
 
-.side-bar .profile-name {
+.side-bar .profile .identity-name {
   font-size: 20px;
   text-transform: uppercase;
 }
@@ -82,7 +94,6 @@ button {
 }
 
 .side-bar .side-bar-links {
-  width: 260px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -97,10 +108,6 @@ button {
       grid-template-columns: 100px 100px;
 }
 
-.side-bar .side-bar-links:hover {
-  background-color: rgba(61, 74, 104, 0.7);
-}
-
 .side-bar .side-bar-links .link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,6 +120,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.side-bar .side-bar-links .link:hover {
+  background-color: rgba(111, 142, 218, 0.3);
 }
 
 .side-bar .side-bar-links .link .link-button {
@@ -208,17 +221,29 @@ button {
   gap: 15px;
 }
 
-.side-bar-min .profile img {
+.side-bar-min .profile .identity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.side-bar-min .profile .identity img {
   height: 60px;
   width: 60px;
   border-radius: 50px;
   border: 2px solid #e1e1e1;
-  border-collapse: separate;
-  border-spacing: 2px;
 }
 
-.side-bar-min .profile-name {
-  font-size: 20px;
+.side-bar-min .profile .identity-name {
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -232,7 +257,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 25px 0;
-  gap: 30px;
+  gap: 10px;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,10 +267,6 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   height: auto;
-}
-
-.side-bar-min .side-bar-links:hover {
-  background-color: rgba(61, 74, 104, 0.7);
 }
 
 .side-bar-min .side-bar-links .link {
@@ -259,6 +280,12 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-bar-min .side-bar-links .link:hover {
+  background-color: rgba(111, 142, 218, 0.3);
 }
 
 .side-bar-min .side-bar-links .link .link-button {

@@ -1,0 +1,74 @@
+[
+  {
+    "id" : 1,
+    "title": "Mood",
+    "artist": "Adam Christopher",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/Adam Christopher - Mood - Acoustic.mp3"
+  },
+  {
+    "id": 2,
+    "title": "What if I Told You That I Love You",
+    "artist": "Ali Gate",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/Ali Gatie - What If I Told You That I Love You.mp3"
+  },
+  {
+    "id": 3,
+    "title": "Coffee",
+    "artist": "beabadoobee",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/beabadoobee - Coffee.mp3"
+  },
+  {
+    "id": 4,
+    "title": "The Nights",
+    "artist": "Chlara",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/Chlara - The Nights.mp3"
+  },
+  {
+    "id": 5,
+    "title": "When You Love Someone",
+    "artist": "Endah N Rhesa",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/Endah N Rhesa - When You Love Someone.mp3"
+  },
+  {
+    "id": 6,
+    "title": "Casualties",
+    "artist": "Ethan Dufault",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/Ethan Dufault - Casualties.mp3"
+  },
+  {
+    "id": 7,
+    "title": "Blue Jeans",
+    "artist": "GANGGA",
+    "category": "Study",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/GANGGA - Blue Jeans.mp3"
+  },
+  {
+    "id": 8,
+    "title": "Just the Two of Us",
+    "artist": "Grover Washington, Jr., Bill Withers",
+    "category": "Pop",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/Grover Washington, Jr., Bill Withers - Just the Two of Us (feat. Bill Withers).mp3"
+  },
+  {
+    "id": 9,
+    "title": "by my side",
+    "artist": "HONNE",
+    "category": "Pop",
+    "img_src": "./assets/image/pic1.png",
+    "src": "./assets/Music/HONNE - by my side.mp3"
+  }
+]

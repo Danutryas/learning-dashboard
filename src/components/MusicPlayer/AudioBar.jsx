@@ -1,11 +1,12 @@
 import React, { useEffect,  useState } from "react";
 
-function AudioControls({
+function AudioBar({
   songs,
   currentSongIndex,
   audioEl,
   isPlaying,
   setCurrentSongIndex,
+  skipSong,
 }) {
   const [playSecond, setPlaySecond] = useState(0);
   const [maxDuration, setMaxDuration] = useState(0);
@@ -18,7 +19,7 @@ function AudioControls({
     setPlaySecond(e.target.value);
   };
   const songMaxDuration = () => {
-    if (!isNaN(audioEl.current.duration)){
+    if (!isNaN(audioEl.current.duration)) {
       setMaxDuration(audioEl.current.duration);
     }
   };
@@ -50,7 +51,6 @@ function AudioControls({
     }, 100);
   };
 
-
   useEffect(() => {
     maxTime();
     if (isPlaying) {
@@ -79,22 +79,12 @@ function AudioControls({
   };
   const audioEnd = () => {
     if (audioEl.current.ended === true) {
-      setCurrentSongIndex(() => {
-        let temp = currentSongIndex;
-        if ((temp = songs.length - 1)) {
-          temp = 0;
-        }
-        temp++;
-        return temp;
-      });
+      skipSong(true)
     }
   };
 
-
-
-
   return (
-    <div className="audio-contols">
+    <div className="audio-controls">
       <audio
         src={songs[currentSongIndex].src}
         ref={audioEl}
@@ -108,11 +98,9 @@ function AudioControls({
         value={playSecond}
         onChange={inputTimeHandler}
       ></input>
-      <span className="duration">
-        {duration}
-        </span>
+      <span className="duration">{duration}</span>
     </div>
   );
 }
 
-export default AudioControls;
+export default AudioBar;

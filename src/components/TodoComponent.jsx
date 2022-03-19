@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/pages/css/TodoComponent.css";
 import TodoForm from "./todo/TodoForm";
 import TodoList from "./todo/TodoList";
@@ -9,13 +9,13 @@ function TodoComponent({
   setInputText,
   todos,
   setTodos,
-  status,
   setStatus,
   filteredTodos,
-  setFilteredTodos,
 }) {
+
   return (
     <div className="todo-app">
+      
       <TodoForm
         setInputText={setInputText}
         inputText={inputText}

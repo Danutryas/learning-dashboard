@@ -1,6 +1,16 @@
-.content {
+.App {
   height: 100vh;
+}
+
+.content {
+  height: 90%;
+  margin-left: 100px;
+  padding: 50px 50px;
+}
+
+.content-full {
+  height: 90%;
   margin-left: 300px;
-  padding: 75px 100px;
+  padding: 50px 50px;
 }
 /*# sourceMappingURL=Dashboard.css.map */

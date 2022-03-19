@@ -1,0 +1,41 @@
+.music-page .songs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (500px)[3];
+      grid-template-columns: repeat(3, 500px);
+  -ms-grid-rows: (100px)[5];
+      grid-template-rows: repeat(5, 100px);
+  gap: 10px;
+}
+
+.music-page .songs .song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px;
+}
+
+.music-page .songs .song .c-player--details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.music-page .songs .song .c-player--details .details-img img {
+  height: 50px;
+  width: 50px;
+  border-radius: 40px;
+}
+/*# sourceMappingURL=MusicComponent.css.map */

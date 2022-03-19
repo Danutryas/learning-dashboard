@@ -33,7 +33,6 @@ function DashboardTodo({ todos, setTodos, filteredTodos,}) {
         </Link>
       </div>
       <div className="todo-status ">
-        <p className="card-text">Up Coming todo</p>
         {todo !== undefined ? (
           <div>
             <p>{todo.text}</p>

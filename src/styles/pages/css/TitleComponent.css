@@ -2,13 +2,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 50px;
+  gap: 25px;
 }
 
 .content-header-logo {
-  width: 75px;
-  min-width: 75px;
-  height: 75px;
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
   background-color: #3d4a68;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,6 +20,8 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 100px;
+  -webkit-box-shadow: 0px 0px 12px 0 rgba(225, 225, 225, 0.4);
+          box-shadow: 0px 0px 12px 0 rgba(225, 225, 225, 0.4);
 }
 
 .content-header-text {
@@ -33,18 +35,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .content-header-text h2 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .content-header-text p {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 18px;
 }
 /*# sourceMappingURL=TitleComponent.css.map */

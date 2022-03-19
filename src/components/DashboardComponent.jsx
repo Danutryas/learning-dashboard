@@ -4,7 +4,6 @@ import DashboardReminder from "./Dashboard/DashboardReminder";
 import TitleComponent from "./TitleComponent";
 import { faWaveSquare } from "@fortawesome/free-solid-svg-icons";
 import "../styles/pages/css/DashboardComponent.css";
-import DashboardMusic from "./Dashboard/DashboardMusic";
 
 function DashboardComponent({
   todos,
@@ -38,9 +37,6 @@ function DashboardComponent({
           reminders={reminders}
           setReminders={setReminders}
         />
-      </div>
-      <div className="big-box">
-        <DashboardMusic />
       </div>
     </div>
   );

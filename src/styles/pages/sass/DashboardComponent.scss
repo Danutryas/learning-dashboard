@@ -6,11 +6,9 @@
   color: $c-font;
   gap: 100px;
   .small-box {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-    height: 250px;
+    display: flex;
     gap: 100px;
+    height: 200px;
     .todo-Dashboard {
       padding: 30px;
       width: 400px;
@@ -24,7 +22,7 @@
         display: flex;
         justify-content: space-between;
         h3 {
-          font-size: 32px;
+          font-size: 24px;
           text-transform: capitalize;
         }
         button {
@@ -70,7 +68,6 @@
       min-width: 400px;
       display: flex;
       flex-direction: column;
-
       gap: 40px;
       background-color: $c-modal;
       border-radius: 20px;
@@ -78,7 +75,7 @@
         display: flex;
         justify-content: space-between;
         h3 {
-          font-size: 32px;
+          font-size: 24px;
           text-transform: capitalize;
         }
         button {

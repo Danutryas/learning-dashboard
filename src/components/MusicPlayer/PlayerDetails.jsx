@@ -9,7 +9,7 @@ function PlayerDetails({ song }) {
       </div>
       <div className="details-song">
         <h3 className="details-title">{song.title}</h3>
-        <h4 className="details-artist">{song.artist}</h4>
+        <p className="details-artist">{song.artist}</p>
       </div>
     </div>
   );

@@ -24,7 +24,6 @@ function DashboardReminder({ reminders, setReminders,filteredReminders}) {
         </Link>
       </div>
       <div className="reminder-status ">
-        <p className="card-text">Up Coming reminder</p>
         {reminderRender !== undefined ? (
           <div>
             <p>{reminderRender.text}</p>

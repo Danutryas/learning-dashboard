@@ -22,6 +22,7 @@ function PlayerControls({ skipSong, setIsPlaying, isPlaying }) {
         <FontAwesomeIcon icon={faForward} size="lg" />
       </button>
     </div>
+    
   );
 }
 

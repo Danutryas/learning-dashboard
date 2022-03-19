@@ -6,7 +6,7 @@ function TitleComponent(props) {
   return (
     <div className="content-header">
       <div className="content-header-logo">
-        <FontAwesomeIcon icon={props.icon} size="2xl" inverse/>
+        <FontAwesomeIcon icon={props.icon} size="xl" inverse/>
       </div>
       <div className="content-header-text">
         <h2>{props.name}</h2>

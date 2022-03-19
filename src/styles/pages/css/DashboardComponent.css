@@ -11,15 +11,11 @@
 }
 
 .c-dashboard .small-box {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 100px;
+  height: 200px;
 }
 
 .c-dashboard .small-box .todo-Dashboard {
@@ -48,7 +44,7 @@
 }
 
 .c-dashboard .small-box .todo-Dashboard .card-header h3 {
-  font-size: 32px;
+  font-size: 24px;
   text-transform: capitalize;
 }
 
@@ -128,7 +124,7 @@
 }
 
 .c-dashboard .small-box .reminder-Dashboard .card-header h3 {
-  font-size: 32px;
+  font-size: 24px;
   text-transform: capitalize;
 }
 

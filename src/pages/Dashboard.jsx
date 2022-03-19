@@ -10,7 +10,9 @@ import {
   Navigate,
 } from "react-router-dom";
 import DashboardComponent from "../components/DashboardComponent";
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import songList from "../song-list.json";
+import MusicComponent from "../components/MusicComponent";
 
 const DashboardPage = () => {
   // state for todo
@@ -22,6 +24,20 @@ const DashboardPage = () => {
   // state for reminder
   const [reminders, setReminders] = useState([]);
   const [filteredReminders, setFilteredReminders] = useState([]);
+
+  // state for music
+  const audioEl = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [songs, setSongs] = useState(songList);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
+  //state for Dashboard
+  const [fullDashboard, SetFullDashboard] = useState(false);
+
+  const sideBarHandler = () => {
+    SetFullDashboard((prev) => !prev);
+  };
 
   useEffect(() => {
     localGet();
@@ -61,10 +77,24 @@ const DashboardPage = () => {
     }
   };
 
+  // music
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioEl.current.play();
+    } else {
+      audioEl.current.pause();
+    }
+  });
+
   return (
     <Router>
-      <SideBarComponent />
-      <div className="content">
+      <SideBarComponent
+        className={fullDashboard ? "side-bar" : "side-bar-min"}
+        sideBarHandler={sideBarHandler}
+        fullDashboard={fullDashboard}
+      />
+      <div className={fullDashboard ? "content-full" : "content"}>
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route
@@ -109,9 +139,31 @@ const DashboardPage = () => {
               />
             }
           />
-          <Route path="/music" exact element={<MusicPlayer />} />
+          <Route
+            path="/music"
+            exact
+            element={
+              <MusicComponent
+                songs={songs}
+                currentSongIndex={currentSongIndex}
+                setCurrentSongIndex={setCurrentSongIndex}
+                setIsPlaying={setIsPlaying}
+              />
+            }
+          />
         </Routes>
       </div>
+      <MusicPlayer
+        audioEl={audioEl}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        songs={songs}
+        setSongs={setSongs}
+        currentSongIndex={currentSongIndex}
+        setCurrentSongIndex={setCurrentSongIndex}
+        nextSongIndex={nextSongIndex}
+        setNextSongIndex={setNextSongIndex}
+      />
     </Router>
   );
 };

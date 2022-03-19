@@ -1,5 +1,13 @@
-.content {
+.App {
   height: 100vh;
-  margin-left: 300px;
-  padding: 75px 100px;
+}
+.content {
+  height: 90%;
+  margin-left: 100px;
+  padding: 50px 50px;
+  &-full {
+    height: 90%;
+    margin-left: 300px;
+    padding: 50px 50px;
+  }
 }

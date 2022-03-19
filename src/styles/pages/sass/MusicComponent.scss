@@ -1,0 +1,34 @@
+@import "./colors";
+
+.music-page {
+  .songs {
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 10px;
+    .song {
+      display: flex;
+      border: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px;
+      .c-player--details {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .details-img {
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 40px;
+          }
+        }
+        .details-song {
+        }
+      }
+      .m-button {
+      }
+    }
+  }
+}

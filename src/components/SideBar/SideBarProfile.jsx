@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react";
 
-function SideBarProfile({sideBarState}) {
-    //get name and profile
+function SideBarProfile({ fullDashboard }) {
 
-    return (
+  return (
     <div className="profile">
-      <img src="./assets/image/profile.png" alt="profile-pict" />
-      <h3 className="profile-name">{sideBarState ? "Danu Tryas" : "DANU"}</h3>
+      <div className="identity">
+        <img src="./assets/image/profile.png" alt="profile-pict" />
+        <h3 className="identity-name">
+          {fullDashboard ? "Danu Tryas" : "DANU"}
+        </h3>
+      </div>
+
       <button>SIGN OUT</button>
     </div>
   );
 }
 
-export default SideBarProfile
+export default SideBarProfile;
