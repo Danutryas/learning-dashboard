@@ -29,7 +29,6 @@ function ReminderList({ reminders, setReminders }) {
                 >
                   <i className="fas fa-check"></i>
                 </button>
-
               </div>
             </div>
           </div>

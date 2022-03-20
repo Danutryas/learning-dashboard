@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/pages/css/TodoComponent.css";
-import TodoForm from "./todo/TodoForm";
 import TodoList from "./todo/TodoList";
+import TodoOption from "./todo/TodoOption";
 import TodoProgress from "./todo/TodoProgress";
 
 function TodoComponent({
@@ -12,20 +12,20 @@ function TodoComponent({
   setStatus,
   filteredTodos,
 }) {
+  const [advanceInput, setAdvanceInput] = useState(true);
 
   return (
     <div className="todo-app">
-      
-      <TodoForm
+      <TodoOption
         setInputText={setInputText}
         inputText={inputText}
         setTodos={setTodos}
         todos={todos}
         setStatus={setStatus}
+        advanceInput={advanceInput}
+        setAdvanceInput={setAdvanceInput}
       />
-      <div className="todo-progress">
-        <TodoProgress todos={todos} />
-      </div>
+      {advanceInput ? "" : <TodoProgress todos={todos} />}
       <div className="todo-list">
         <TodoList
           setTodos={setTodos}

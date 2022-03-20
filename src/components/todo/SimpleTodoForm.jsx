@@ -1,33 +1,45 @@
 import React from "react";
 
-const TodoForm = ({ setInputText, setTodos, inputText, todos }) => {
+const SimpleTodoForm = ({
+  inputText,
+  todos,
+  setTodos,
+  setInputText,
+}) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
+  };
+  const submitKeyPress = (e) => {
+    if (e.code === "Enter") {
+      submitTodoHandler();
+    }
   };
   const submitTodoHandler = (e) => {
     if (inputText !== "") {
       setTodos([
         ...todos,
         {
+          id: Math.floor(Math.random() * 1000),
           text: inputText,
           completed: false,
-          id: Math.floor(Math.random() * 1000),
+          deadline: "",
+          type: "",
+          file: "",
+          link: "",
+          desc: "",
+          subtask: "",
         },
       ]);
     }
     setInputText("");
   };
-  const submitKeyPress = (e) => {
-    if (e.code === 'Enter') {
-      submitTodoHandler()
-    }
-  }
+
+
 
   return (
     <div className="todo-form">
-      <h3>Todo Form</h3>
-      
-      {/* <div className="form-input">
+      <h3>Simple Form</h3>
+      <div className="form-input">
         <input
           type="text"
           onChange={inputTextHandler}
@@ -35,9 +47,9 @@ const TodoForm = ({ setInputText, setTodos, inputText, todos }) => {
           value={inputText}
         />
         <input type={"submit"} onClick={submitTodoHandler} value="+" />
-      </div> */}
+      </div>
     </div>
   );
 };
 
-export default TodoForm;
+export default SimpleTodoForm;
