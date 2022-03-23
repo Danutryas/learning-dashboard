@@ -3,31 +3,47 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import TaskBuilder from "./TaskBuilder";
 
-function AssignmentTasks({
-  setSubTask1,
-  setSubTask2,
-  setSubTask3,
-  subTask1,
-  subTask2,
-  subTask3,
-}) {
-  const subTask1Handler = (e) => {
-    setSubTask1(e.target.value);
+function AssignmentTasks({ setSubTask, subTask }) {
+  const inputHandler = (i, e) => {
+    const values = [...subTask];
+    const targetValue = e.target.value
+    values[i][e.target.name] = targetValue;
+    setSubTask(values);
   };
-  const subTask2Handler = (e) => {
-    setSubTask2(e.target.value);
+  const addInputHandler = () => {
+    setSubTask([
+      ...subTask,
+      {
+        task: "",
+      }
+    ]);
   };
-  const subTask3Handler = (e) => {
-    setSubTask3(e.target.value);
-  };
+  const removeInputhandler = (index) => {
+    const values = [...subTask]
+    const length = values.length
+    if (length > 3) {
+      values.splice(index,1)
+      setSubTask(values)
+    }
+  }
+
 
   return (
     <div className="breakdown-tasks">
       <h5>BREAKDOWN TASK</h5>
-      <TaskBuilder onChange={subTask1Handler} value={subTask1} />
-      <TaskBuilder onChange={subTask2Handler} value={subTask2} />
-      <TaskBuilder onChange={subTask3Handler} value={subTask3} />
-      <button>Add Tasks</button>
+      {subTask.map((task, i) => {
+        return (
+          <div key={i}>
+            <TaskBuilder
+              i={i}
+              onChangeFunc={inputHandler}
+              task={task}
+              removeInputhandler={removeInputhandler}
+            />
+          </div>
+        );
+      })}
+      <button onClick={addInputHandler}>Add Tasks</button>
       <button>
         <FontAwesomeIcon icon={faTasks} />
         Add Pomodoro

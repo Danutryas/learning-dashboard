@@ -27,11 +27,16 @@ function AdvanceTodoForm({
   const [deadline, setDeadline] = useState("");
   const [linkTodo, setLinkTodo] = useState("");
   const [descTodo, setDescTodo] = useState("");
-  const [subTask1, setSubTask1] = useState("");
-  const [subTask2, setSubTask2] = useState("");
-  const [subTask3, setSubTask3] = useState("");
+  const [subTask, setSubTask] = useState([
+    {task:""},
+    {task:""},
+    {task:""},
+  ]);
 
+  
   const submitTodoHandler = (e) => {
+    const notEmptySubtask = subTask.filter((task) => task.task !== "");
+
     if (inputText !== "") {
       setTodos([
         ...todos,
@@ -44,19 +49,21 @@ function AdvanceTodoForm({
           file: "",
           link: linkTodo,
           desc: descTodo,
-          subtask: [subTask1, subTask2, subTask3],
+          subtask: notEmptySubtask,
         },
       ]);
     }
     setInputText("");
-    setSubTask1("");
-    setSubTask2("");
-    setSubTask3("");
     setDescTodo("");
     setLinkTodo("");
     setDeadline("");
+    setSubTask([
+      {task:""},
+      {task:""},
+      {task:""},
+    ])
   };
-
+  console.log(todos)
   return (
     <div>
       <div className="">
@@ -87,12 +94,8 @@ function AdvanceTodoForm({
           linkTodo={linkTodo}
           setDescTodo={setDescTodo}
           descTodo={descTodo}
-          subTask1={subTask1}
-          setSubTask1={setSubTask1}
-          subTask2={subTask2}
-          setSubTask2={setSubTask2}
-          subTask3={subTask3}
-          setSubTask3={setSubTask3}
+          subTask={subTask}
+          setSubTask={setSubTask}
         />
       ) : (
         <EventTodoForm />

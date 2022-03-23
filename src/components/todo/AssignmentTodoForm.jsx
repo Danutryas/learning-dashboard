@@ -10,12 +10,8 @@ function AssignmentTodoForm({
   linkTodo,
   setDescTodo,
   descTodo,
-  setSubTask1,
-  subTask1,
-  setSubTask2,
-  subTask2,
-  setSubTask3,
-  subTask3,
+  subTask,
+  setSubTask
 }) {
   return (
     <div style={{ display: "flex" }}>
@@ -28,12 +24,8 @@ function AssignmentTodoForm({
         descTodo={descTodo}
       />
       <AssignmentTasks
-        setSubTask1={setSubTask1}
-        setSubTask2={setSubTask2}
-        setSubTask3={setSubTask3}
-        subTask1={subTask1}
-        subTask2={subTask2}
-        subTask3={subTask3}
+        setSubTask={setSubTask}
+        subTask={subTask}
       />
     </div>
   );
