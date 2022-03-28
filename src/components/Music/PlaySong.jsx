@@ -11,7 +11,7 @@ function PlaySong({ songs, song, setCurrentSongIndex, setIsPlaying }) {
   return (
     <div className="m-button">
       <button onClick={playButton}>
-        <FontAwesomeIcon icon={faPlay} />
+        <FontAwesomeIcon icon={faPlay} six/>
       </button>
     </div>
   );

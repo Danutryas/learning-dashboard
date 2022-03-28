@@ -27,7 +27,7 @@ const SimpleTodoForm = ({
           file: "",
           link: "",
           desc: "",
-          subtask: "",
+          subtask: [],
         },
       ]);
     }

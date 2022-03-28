@@ -1,5 +1,15 @@
 @import "./colors";
 
+@mixin panel-form {
+  display: flex;
+  gap: 15px;
+}
+@mixin input-form {
+  width: 70%;
+  height: 25px;
+  padding: 5px 10px;
+}
+
 .todo-app {
   display: grid;
   grid-template: 250px 300px/ 1fr 1fr;
@@ -13,15 +23,221 @@
     color: $c-font;
     font-size: 28px;
     text-transform: capitalize;
-      border-bottom: 4px solid $c-font;
+    border-bottom: 4px solid $c-font;
     padding: 5px;
+  }
+  .todo-choose-button {
+    width: 400px;
+    display: flex;
+    gap: 20px;
+    button {
+      padding: 0 20px;
+      height: 30px;
+      border-radius: 10px;
+    }
+  }
+  .advance-input {
+    height: auto;
+    padding: 20px 20px;
+    background-color: $c-modal;
+    margin-top: 20px;
+    border-radius: 20px;
+    .input-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .name-section {
+        // height: 40px;
+        @include panel-form();
+        align-items: center;
+        //logo
+        & input[type="text"] {
+          @include input-form();
+          height: 30px;
+          width: 300px;
+        }
+        & input[type="submit"] {
+          height: 30px;
+          padding: 0 10px;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          font-weight: 500;
+          border-radius: 5px;
+        }
+      }
+      .close-button {
+        button {
+          height: 30px;
+          width: 30px;
+          border-radius: 30px;
+          background: $c-g-modal;
+          color: $c-font;
+          border: 1px solid $c-accent;
+          outline: none;
+        }
+      }
+    }
+    .category-section {
+      @include panel-form();
+      margin: 10px 0 35px 0;
+
+      select {
+        height: 20px;
+        padding: 0 5px;
+      }
+    }
+    .form-container {
+      margin-top: 20px;
+      .assignment-form {
+        display: flex;
+        .container-title {
+          width: 100%;
+          font-size: 16px;
+          color: $c-font;
+          padding-bottom: 10px;
+          border-bottom: 1px solid $c-accent;
+          padding-left: 10px;
+        }
+        .panel-form {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .left-panel {
+          width: 60%;
+          .detail-date {
+            @include panel-form();
+            input {
+              @include input-form();
+            }
+          }
+          .link-detail {
+            @include panel-form();
+            input {
+              @include input-form();
+            }
+          }
+          .desc-detail {
+            @include panel-form();
+            textarea {
+              @include input-form();
+              height: 100px;
+              overflow-y: visible;
+              resize: none;
+            }
+          }
+        }
+        .right-panel {
+          width: calc(40% - 30px);
+          .sub-task-list {
+            height: 125px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .sub-task {
+              @include panel-form();
+              input {
+                @include input-form();
+              }
+              button {
+                height: 25px;
+                width: 25px;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+          .add-task {
+            margin-top: 10px;
+            margin: 0 auto;
+            button {
+              width: 80px;
+              height: 25px;
+              border-radius: 5px;
+            }
+          }
+          .pomodoro-link {
+            width: 150px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0 0 auto;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  .show-detail-todo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $c-font;
+    margin-top: 20px;
+    background-color: $c-modal;
+    padding: 20px 40px;
+    border-radius: 20px;
+    .heading {
+      @include panel-form();
+      flex-direction:column;
+      padding-left: 10px;
+      h4 {
+        font-size: 22px;
+      }
+
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      width: 100%;
+      .title{
+        padding-left: 25px;
+      }
+      .left-container {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .status {
+          @include panel-form();
+        }
+        .deadline {
+          @include panel-form();
+        }
+        .link {
+          @include panel-form();
+        }
+        .description {
+          @include panel-form();
+        }
+      }
+      .list-subtask {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        gap: 10px;
+        height: 150px;
+        overflow-y: auto;
+        .subtask {
+          @include panel-form();
+        }
+      }
+    }
   }
   .todo-form {
     border-radius: 20px;
     background-color: $c-modal;
     display: flex;
     align-items: center;
-    padding: 20px ;
+    padding: 20px;
     width: 100%;
     grid-row: 1/2;
     flex-direction: column;
@@ -42,7 +258,7 @@
           border: none;
           border-bottom: 2px solid $c-button;
           &:focus {
-            border-bottom:2px solid $c-font;
+            border-bottom: 2px solid $c-font;
             outline: none;
           }
         }
@@ -56,7 +272,7 @@
           border: none;
           &:hover {
             box-shadow: 0px 0px 4px 1px $c-font;
-            cursor: pointer;            
+            cursor: pointer;
           }
           &:active {
             border: 1px solid $c-font;
@@ -146,7 +362,6 @@
           // kumpulan button
           display: flex;
           gap: 20px;
-
         }
         & button {
           // complete & trash button
@@ -158,7 +373,7 @@
           background: $c-g-modal;
           border: none;
           box-shadow: 0px 0px 5px 0px $c-font;
-          &:hover{
+          &:hover {
             border: 1px solid $c-font;
           }
           i {
@@ -188,7 +403,8 @@
         font-size: 16px;
         cursor: pointer;
         border-radius: 20px;
-        -webkit-appearance: none; appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
         text-align: center;
         outline: none;
         &:active {

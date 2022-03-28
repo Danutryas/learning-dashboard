@@ -7,7 +7,7 @@
   gap: 100px;
   .small-box {
     display: flex;
-    gap: 100px;
+    gap: 80px;
     height: 200px;
     .todo-Dashboard {
       padding: 30px;
@@ -22,7 +22,7 @@
         display: flex;
         justify-content: space-between;
         h3 {
-          font-size: 24px;
+          font-size: 22px;
           text-transform: capitalize;
         }
         button {
@@ -39,7 +39,7 @@
         flex-direction: column;
         gap: 20px;
         .card-text {
-          font-size: 18px;
+          font-size: 16px;
           padding-left: 5px;
         }
         div {
@@ -75,7 +75,7 @@
         display: flex;
         justify-content: space-between;
         h3 {
-          font-size: 24px;
+          font-size: 22px;
           text-transform: capitalize;
         }
         button {
@@ -121,82 +121,5 @@
     height: 300px;
     padding: 30px;
     border-radius: 20px;
-    .music-dashboard {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-
-      .m-d-header {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        h3 {
-          text-align: center;
-          font-size: 32px;
-          text-transform: capitalize;
-          grid-column-start: 2;
-        }
-        button {
-          float: right;
-          height: 40px;
-          width: 40px;
-          border-radius: 50px;
-          background: $c-g-modal;
-          outline: none;
-          border: none;
-          grid-column-start: 3;
-        }
-      }
-      .m-d-component {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        .m-details {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          text-align: center;
-          .m-title {
-            font-size: 24px;
-          }
-          .m-artist {
-            font-size: 16px;
-          }
-        }
-        .c-player {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          align-items: center;
-          .audio-contols {
-            display: flex;
-            gap: 15px;
-            // .current-time {
-
-            // }
-            input[type="range"] {
-              width: 1000px;
-          
-            }
-            // .duration {
-
-            // }
-          }
-          .c-player--controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-
-            button {
-              width: 40px;
-              height: 40px;
-              border-radius: 50px;
-              border: none;
-              outline: none;
-            }
-          }
-        }
-      }
-    }
   }
 }

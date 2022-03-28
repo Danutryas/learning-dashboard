@@ -14,7 +14,7 @@ function AssignmentTodoForm({
   setSubTask
 }) {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="assignment-form">
       <AssignmentDetails
         setDeadline={setDeadline}
         deadline={deadline}

@@ -13,6 +13,7 @@ function TodoComponent({
   filteredTodos,
 }) {
   const [advanceInput, setAdvanceInput] = useState(true);
+  const [showIndex, setShowIndex] = useState(0);
 
   return (
     <div className="todo-app">
@@ -24,14 +25,24 @@ function TodoComponent({
         setStatus={setStatus}
         advanceInput={advanceInput}
         setAdvanceInput={setAdvanceInput}
+        showIndex={showIndex}
       />
-      {advanceInput ? "" : <TodoProgress todos={todos} />}
+      {advanceInput ? (
+        ""
+      ) : (
+        <>
+          <TodoProgress todos={todos} />
+        </>
+      )}
+
       <div className="todo-list">
         <TodoList
           setTodos={setTodos}
           filteredTodos={filteredTodos}
           todos={todos}
           setStatus={setStatus}
+          setShowIndex={setShowIndex}
+          setAdvanceInput={setAdvanceInput}
         />
       </div>
     </div>

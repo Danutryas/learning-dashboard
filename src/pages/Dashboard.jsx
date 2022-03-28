@@ -7,7 +7,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
+  Navigate, 
 } from "react-router-dom";
 import DashboardComponent from "../components/DashboardComponent";
 import React, { useRef, useState, useEffect } from "react";

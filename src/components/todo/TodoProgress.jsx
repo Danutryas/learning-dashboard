@@ -15,9 +15,6 @@ function TodoProgress({ todos }) {
     circleOneStroke: "#173f4f",
     circleTwoStroke: "#41495C",
   };
-  // #41495C
-  // #3d4a68
-  // #173f4f
 
   return (
     <div className="todo-progress">

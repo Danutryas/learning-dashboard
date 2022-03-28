@@ -4,8 +4,8 @@ import {faTasks} from '@fortawesome/free-solid-svg-icons'
 
 function TaskBuilder({ onChangeFunc, i, task ,removeInputhandler}) {
   return (
-    <div className="sub-task">
-      <FontAwesomeIcon icon={faTasks} />
+    <div className="sub-task" key={i}>
+      <FontAwesomeIcon icon={faTasks} inverse size="lg" />
       <input
         type="text"
         onChange={(e) => onChangeFunc(i, e)}

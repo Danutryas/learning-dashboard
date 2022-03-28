@@ -9,8 +9,8 @@ function TodoOption({
   todos,
   advanceInput,
   setAdvanceInput,
+  showIndex,
 }) {
-  
   return (
     <div>
       <div className="todo-choose-button">
@@ -26,6 +26,7 @@ function TodoOption({
           setTodos={setTodos}
           todos={todos}
           setInputText={setInputText}
+          showIndex={showIndex}
         />
       ) : (
         <SimpleTodoForm

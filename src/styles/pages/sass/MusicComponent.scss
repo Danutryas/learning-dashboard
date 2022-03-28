@@ -5,14 +5,18 @@
     display: grid;
     grid-template-columns: repeat(3, 500px);
     grid-template-rows: repeat(5, 100px);
-    gap: 10px;
+    gap: 40px;
     .song {
       display: flex;
-      border: 1px solid black;
+      border: 1px solid $c-font;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 25px;
+      color: $c-font;
+      border-radius: 10px;
+      background-color: $c-modal;
+      
       .c-player--details {
         display: flex;
         gap: 20px;
@@ -25,9 +29,20 @@
           }
         }
         .details-song {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
         }
       }
       .m-button {
+        button {
+          height: 25px;
+          width: 25px;
+          border-radius: 4px;
+          outline: none;
+          border: none;
+          background-color: $c-accent;
+        }
       }
     }
   }

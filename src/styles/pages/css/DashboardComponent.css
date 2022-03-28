@@ -14,7 +14,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 100px;
+  gap: 80px;
   height: 200px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .c-dashboard .small-box .todo-Dashboard .card-header h3 {
-  font-size: 24px;
+  font-size: 22px;
   text-transform: capitalize;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .c-dashboard .small-box .todo-Dashboard .todo-status .card-text {
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 5px;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .c-dashboard .small-box .reminder-Dashboard .card-header h3 {
-  font-size: 24px;
+  font-size: 22px;
   text-transform: capitalize;
 }
 
@@ -183,120 +183,5 @@
   height: 300px;
   padding: 30px;
   border-radius: 20px;
-}
-
-.c-dashboard .big-box .music-dashboard {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 40px;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-header h3 {
-  text-align: center;
-  font-size: 32px;
-  text-transform: capitalize;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-header button {
-  float: right;
-  height: 40px;
-  width: 40px;
-  border-radius: 50px;
-  background: linear-gradient(47deg, #0f2027 19.11%, #203a43 51.09%, #2c5364 96.17%);
-  outline: none;
-  border: none;
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .m-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .m-details .m-title {
-  font-size: 24px;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .m-details .m-artist {
-  font-size: 16px;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .c-player {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .c-player .audio-contols {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 15px;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .c-player .audio-contols input[type="range"] {
-  width: 1000px;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .c-player .c-player--controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
-}
-
-.c-dashboard .big-box .music-dashboard .m-d-component .c-player .c-player--controls button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  border: none;
-  outline: none;
 }
 /*# sourceMappingURL=DashboardComponent.css.map */

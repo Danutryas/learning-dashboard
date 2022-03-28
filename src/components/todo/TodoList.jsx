@@ -1,9 +1,20 @@
 import React from 'react';
 import Todo from './Todo';
 
-const TodoList = ({ todos, setTodos, filteredTodos, setStatus }) => {
+const TodoList = ({
+  todos,
+  setTodos,
+  filteredTodos,
+  setStatus,
+  setShowIndex,
+  setAdvanceInput,
+}) => {
   const statusHandler = (e) => {
     setStatus(e.target.value);
+  };
+  const detailsHandler = (index) => {
+    setShowIndex(index);
+    setAdvanceInput(true)
   };
   return (
     <>
@@ -15,14 +26,16 @@ const TodoList = ({ todos, setTodos, filteredTodos, setStatus }) => {
         </select>
       </div>
       <ul className="list-component">
-        {filteredTodos.map((todo) => (
+        {filteredTodos.map((todo, i) => (
           <Todo
+            i={i}
             setTodos={setTodos}
             todos={todos}
             todo={todo}
             text={todo.text}
             key={todo.id}
             complete={todo.completed}
+            detailsHandler={detailsHandler}
           />
         ))}
       </ul>

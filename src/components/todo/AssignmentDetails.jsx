@@ -17,35 +17,29 @@ function AssignmentDetails({
   const linkHandler = (e) => {
     setLinkTodo(e.target.value);
   };
-  const descHandler = (e)=> {
+  const descHandler = (e) => {
     setDescTodo(e.target.value);
-  }
+  };
 
   return (
-    <div className="assignment-details">
-      <h5>ASSIGNMENT DETAILS</h5>
-      <div className="detail-date">
-        <FontAwesomeIcon icon={faTasks} />
-        <input type={"datetime-local"} onChange={dateHandler} />
-      </div>
-      <div className="file-detail">
-        <div className="file-default">
-          <FontAwesomeIcon icon={faTasks} />
-          <TodoDetail type={"file"} />
+    <div className="left-panel">
+      <h5 className="container-title">ASSIGNMENT DETAILS</h5>
+      <div className="panel-form">
+        <div className="detail-date">
+          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
+          <input type={"datetime-local"} onChange={dateHandler} />
         </div>
-      </div>
-      <div className="link-detail">
-        <div className="link-default">
-          <FontAwesomeIcon icon={faTasks} />
-          <TodoDetail linkHandler={linkHandler} type={"url"} value={linkTodo}/>
+        <div className="link-detail">
+          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
+          <input type={"url"} onChange={linkHandler} value={linkTodo} />
         </div>
-      </div>
-      <div className="desc-detail">
-        <FontAwesomeIcon icon={faTasks} />
-        <input type="text" onChange={descHandler} value={descTodo}/>
+        <div className="desc-detail">
+          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
+          <textarea onChange={descHandler} value={descTodo} />
+        </div>
       </div>
     </div>
   );
 }
 
-export default AssignmentDetails
+export default AssignmentDetails;

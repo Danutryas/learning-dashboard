@@ -6,7 +6,7 @@ import TaskBuilder from "./TaskBuilder";
 function AssignmentTasks({ setSubTask, subTask }) {
   const inputHandler = (i, e) => {
     const values = [...subTask];
-    const targetValue = e.target.value
+    const targetValue = e.target.value;
     values[i][e.target.name] = targetValue;
     setSubTask(values);
   };
@@ -15,39 +15,42 @@ function AssignmentTasks({ setSubTask, subTask }) {
       ...subTask,
       {
         task: "",
-      }
+      },
     ]);
   };
   const removeInputhandler = (index) => {
-    const values = [...subTask]
-    const length = values.length
+    const values = [...subTask];
+    const length = values.length;
     if (length > 3) {
-      values.splice(index,1)
-      setSubTask(values)
+      values.splice(index, 1);
+      setSubTask(values);
     }
-  }
-
+  };
 
   return (
-    <div className="breakdown-tasks">
-      <h5>BREAKDOWN TASK</h5>
-      {subTask.map((task, i) => {
-        return (
-          <div key={i}>
-            <TaskBuilder
-              i={i}
-              onChangeFunc={inputHandler}
-              task={task}
-              removeInputhandler={removeInputhandler}
-            />
-          </div>
-        );
-      })}
-      <button onClick={addInputHandler}>Add Tasks</button>
-      <button>
-        <FontAwesomeIcon icon={faTasks} />
-        Add Pomodoro
-      </button>
+    <div className="right-panel">
+      <h5 className="container-title">BREAKDOWN TASK</h5>
+      <div className="panel-form">
+        <div className="sub-task-list">
+          {subTask.map((task, i) => {
+            return (
+              <TaskBuilder
+                i={i}
+                onChangeFunc={inputHandler}
+                task={task}
+                removeInputhandler={removeInputhandler}
+              />
+            );
+          })}
+        </div>
+        <div className="add-task">
+          <button onClick={addInputHandler}>Add Tasks</button>
+        </div>
+        <button className="pomodoro-link">
+          <FontAwesomeIcon icon={faTasks} />
+          Add Pomodoro
+        </button>
+      </div>
     </div>
   );
 }

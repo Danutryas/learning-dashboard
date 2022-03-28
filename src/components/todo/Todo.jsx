@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faX} from '@fortawesome/free-solid-svg-icons'
 
-function Todo({ text, todo, setTodos, todos , complete}) {
+function Todo({ text, todo, setTodos, todos, complete, i, detailsHandler }) {
   const deleteButton = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
@@ -21,9 +21,11 @@ function Todo({ text, todo, setTodos, todos , complete}) {
     );
   };
 
-
   return (
-    <div className={`todo  ${complete ? "complete" : "uncomplete"}`}>
+    <div
+      className={`todo  ${complete ? "complete" : "uncomplete"}`}
+      onClick={() => detailsHandler(i)}
+    >
       <li className="todo-item">
         <p>{text}</p>
       </li>

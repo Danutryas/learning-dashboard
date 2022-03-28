@@ -39,7 +39,7 @@ function ReminderForm({
   return (
     <>
       <div className="reminder-input">
-        <input type="text" value={nameInput} onChange={nameInputHandler} />
+        <input type="text" value={nameInput} onChange={nameInputHandler} placeholder="Add reminder"/>
         <div className="time-form">
           <input type="date" onChange={dateInputHandler} />
           <input type="time" onChange={timeInputHandler} />
