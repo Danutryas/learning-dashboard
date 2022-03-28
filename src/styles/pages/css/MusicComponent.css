@@ -1,8 +1,8 @@
 .music-page .songs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (500px)[3];
-      grid-template-columns: repeat(3, 500px);
+  -ms-grid-columns: (450px)[3];
+      grid-template-columns: repeat(3, 450px);
   -ms-grid-rows: (100px)[5];
       grid-template-rows: repeat(5, 100px);
   gap: 40px;
