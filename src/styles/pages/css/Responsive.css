@@ -1,0 +1,47 @@
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .App .content {
+    height: 100%;
+  }
+  .App .content-full {
+    height: 100%;
+  }
+  .App .music {
+    display: none;
+  }
+  .c-dashboard .small-box {
+    gap: 40px;
+    height: 200px;
+  }
+  .reminder-app {
+    height: 100%;
+    gap: 30px;
+  }
+  .reminder-app .reminder-form {
+    padding: 30px 20px;
+  }
+  .reminder-app .reminder-list {
+    padding: 10px;
+  }
+  .reminder-app .reminder-list .reminder-list-component {
+    -ms-grid-rows: (100px)[4];
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(4, 100px)/1fr;
+  }
+  .music-page .songs {
+    -ms-grid-columns: (400px)[2];
+        grid-template-columns: repeat(2, 400px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .App {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .App {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Responsive.css.map */
