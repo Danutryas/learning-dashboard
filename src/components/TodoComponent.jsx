@@ -12,7 +12,7 @@ function TodoComponent({
   setStatus,
   filteredTodos,
 }) {
-  const [advanceInput, setAdvanceInput] = useState(true);
+  const [advanceInput, setAdvanceInput] = useState(false);
   const [showIndex, setShowIndex] = useState(0);
 
   return (

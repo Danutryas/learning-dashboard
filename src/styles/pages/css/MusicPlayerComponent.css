@@ -18,8 +18,8 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 50px;
-  border-top: 2px solid #6F8EDA;
-  background-color: #41495C;
+  border-top: 2px solid #6f8eda;
+  background-color: #41495c;
   color: #e1e1e1;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .music .c-player .c-player--details .details-img img {
-  outline: 2px solid #6F8EDA;
+  outline: 2px solid #6f8eda;
   outline-offset: 3px;
   height: 50px;
   width: 50px;
@@ -107,7 +107,7 @@
   border-radius: 10px;
   border: none;
   outline: none;
-  color: #41495C;
+  color: #41495c;
 }
 
 .music .c-player .c-volume-contol {

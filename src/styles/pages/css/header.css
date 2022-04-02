@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header a {
+  background: #3d4a68;
+  color: white;
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 120px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.header a:hover {
+  background: linear-gradient(47deg, #0f2027 19.11%, #203a43 51.09%, #2c5364 96.17%);
+}
+/*# sourceMappingURL=header.css.map */

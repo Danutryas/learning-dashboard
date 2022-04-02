@@ -4,6 +4,8 @@ import { faTasks } from "@fortawesome/free-solid-svg-icons";
 import AssignmentTodoForm from "./AssignmentTodoForm";
 import EventTodoForm from "./EventTodoForm";
 import TodoShowDetail from "../todo/TodoShowDetail";
+import { RiTodoLine } from "react-icons/ri";
+import { BsHandIndex } from "react-icons/bs";
 
 function AdvanceTodoForm({
   setAdvanceInput,
@@ -65,7 +67,7 @@ function AdvanceTodoForm({
       <div className="advance-input">
         <div className="input-heading">
           <div className="name-section">
-            <FontAwesomeIcon icon={faTasks} inverse size="lg" />
+            <RiTodoLine size="25px" color="white" />
             <input
               type="text"
               onChange={inputTextHandler}
@@ -83,7 +85,7 @@ function AdvanceTodoForm({
           </div>
         </div>
         <div className="category-section">
-          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
+          <BsHandIndex size="25px" color="white"  />
           <select onChange={todoTypeStatusHandler} name="todoOption">
             <option value={"assignment"}>Assignment</option>
             <option value={"event"}>Event</option>

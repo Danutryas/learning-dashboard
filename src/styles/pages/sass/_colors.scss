@@ -1,10 +1,18 @@
-$c-base: #41495C;
+$c-base: #41495c;
 $c-modal: #3d4a68;
-$c-modal-40: rgba(#3d4a68,0.4);
-$c-modal-70: rgba(#3d4a68,0.7);
+$c-modal-40: rgba(#3d4a68, 0.4);
+$c-modal-70: rgba(#3d4a68, 0.7);
 $c-font: #e1e1e1;
-$c-button:#173f4f;
-$c-accent:#6F8EDA;
+$c-button: #173f4f;
+$c-accent: #6f8eda;
+$c-g-accent: linear-gradient(
+  to right top,
+  #6f8eda,
+  #7d96da,
+  #8a9ed9,
+  #97a7d9,
+  #a3afd8
+);
 $c-g-modal: linear-gradient(
   47deg,
   #0f2027 19.11%,

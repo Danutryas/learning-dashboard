@@ -1,7 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { faTasks } from "@fortawesome/free-solid-svg-icons";
-import TodoDetail from "./TodoDetail";
+import {
+  BsCheck2Square,
+  BsCalendarDate,
+  BsLink45Deg,
+} from "react-icons/bs";
+import { IconContext } from "react-icons";
+import { MdOutlineDescription } from "react-icons/md";
+
 
 function AssignmentDetails({
   setDeadline,
@@ -22,23 +28,25 @@ function AssignmentDetails({
   };
 
   return (
-    <div className="left-panel">
-      <h5 className="container-title">ASSIGNMENT DETAILS</h5>
-      <div className="panel-form">
-        <div className="detail-date">
-          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
-          <input type={"datetime-local"} onChange={dateHandler} />
-        </div>
-        <div className="link-detail">
-          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
-          <input type={"url"} onChange={linkHandler} value={linkTodo} />
-        </div>
-        <div className="desc-detail">
-          <FontAwesomeIcon icon={faTasks} inverse size="lg" />
-          <textarea onChange={descHandler} value={descTodo} />
+    <IconContext.Provider value={{ size: "25px", color: "white" }}>
+      <div className="left-panel">
+        <h5 className="container-title">ASSIGNMENT DETAILS</h5>
+        <div className="panel-form">
+          <div className="detail-date">
+            <BsCalendarDate />
+            <input type={"datetime-local"} onChange={dateHandler} />
+          </div>
+          <div className="link-detail">
+            <BsLink45Deg />
+            <input type={"url"} onChange={linkHandler} value={linkTodo} />
+          </div>
+          <div className="desc-detail">
+            <MdOutlineDescription />
+            <textarea onChange={descHandler} value={descTodo} />
+          </div>
         </div>
       </div>
-    </div>
+    </IconContext.Provider>
   );
 }
 

@@ -1,26 +1,40 @@
 import React from "react";
-import {
-  faHomeUser,
-  faWaveSquare,
-  faCake,
-  faMusic,
-  faRandom,
-} from "@fortawesome/free-solid-svg-icons";
+
+import { MdMonitor } from "react-icons/md";
+import { FaHouseUser, FaMusic } from "react-icons/fa";
+import { RiCalendarTodoFill } from "react-icons/ri";
+import { CgBell } from "react-icons/cg";
 import SideBarBuilder from "./SideBarBuilder";
 
 function SideBarLinks() {
   // list of builder
   return (
     <div className="side-bar-links">
-      <SideBarBuilder link={"/"} name={"Home"} icon={faHomeUser} />
+      <SideBarBuilder link={"/"} name={"Home"} icon={FaHouseUser} size="20px" />
       <SideBarBuilder
         link={"/dashboard"}
         name={"Dashboard"}
-        icon={faWaveSquare}
+        icon={MdMonitor}
+        size="22px"
       />
-      <SideBarBuilder link={"/todo"} name={"Todo"} icon={faCake} />
-      <SideBarBuilder link={"/reminder"} name={"Reminder"} icon={faRandom} />
-      <SideBarBuilder link={"/music"} name={"Music"} icon={faMusic} />
+      <SideBarBuilder
+        link={"/todo"}
+        name={"Todo"}
+        icon={RiCalendarTodoFill}
+        size="20px"
+      />
+      <SideBarBuilder
+        link={"/reminder"}
+        name={"Reminder"}
+        icon={CgBell}
+        size="22px"
+      />
+      <SideBarBuilder
+        link={"/music"}
+        name={"Music"}
+        icon={FaMusic}
+        size="18px"
+      />
     </div>
   );
 }

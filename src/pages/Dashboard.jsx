@@ -13,6 +13,7 @@ import DashboardComponent from "../components/DashboardComponent";
 import React, { useRef, useState, useEffect } from "react";
 import songList from "../song-list.json";
 import MusicComponent from "../components/MusicComponent";
+import Header from "../components/header";
 
 const DashboardPage = () => {
   // state for todo
@@ -95,6 +96,7 @@ const DashboardPage = () => {
         fullDashboard={fullDashboard}
       />
       <div className={fullDashboard ? "content-full" : "content"}>
+        <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route

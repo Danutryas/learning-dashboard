@@ -36,8 +36,6 @@
   font-size: 24px;
   color: #e1e1e1;
   background-color: #3d4a68;
-  -webkit-box-shadow: 2px 2px 15px 2px rgba(225, 225, 225, 0.2);
-          box-shadow: 2px 2px 15px 2px rgba(225, 225, 225, 0.2);
 }
 
 .reminder-app .reminder-form .reminder-input {
@@ -81,14 +79,12 @@
   border: none;
   background: linear-gradient(47deg, #0f2027 19.11%, #203a43 51.09%, #2c5364 96.17%);
   color: #e1e1e1;
-  -webkit-box-shadow: 1px 1px 2px #e1e1e1;
-          box-shadow: 1px 1px 2px #e1e1e1;
+  -webkit-box-shadow: 0px 0px 5px #e1e1e1;
+          box-shadow: 0px 0px 5px #e1e1e1;
   cursor: pointer;
 }
 
 .reminder-app .reminder-form .reminder-input input[type="button"]:active {
-  -webkit-transform: translate(1px, 1px);
-          transform: translate(1px, 1px);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -110,13 +106,13 @@
 
 .reminder-app .reminder-form .reminder-input .time-form input[type="date"] {
   height: 30px;
-  background-color: rgba(111, 142, 218, 0.9);
+  background-color: #e1e1e1;
   border: 1px solid #3d4a68;
   outline: none;
 }
 
 .reminder-app .reminder-form .reminder-input .time-form input[type="time"] {
-  background-color: rgba(111, 142, 218, 0.9);
+  background-color: #e1e1e1;
   border: 1px solid #3d4a68;
   height: 30px;
   outline: none;
@@ -137,8 +133,6 @@
   border-radius: 25px;
   background-color: #3d4a68;
   padding: 20px;
-  -webkit-box-shadow: 2px 2px 15px 2px rgba(225, 225, 225, 0.2);
-          box-shadow: 2px 2px 15px 2px rgba(225, 225, 225, 0.2);
   height: 100%;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -165,7 +159,7 @@
 
 .reminder-app .reminder-list .reminder-list-component .reminder {
   padding: 10px;
-  border: 1px solid #6F8EDA;
+  border: 2px solid #6f8eda;
   border-radius: 10px;
   height: 100px;
 }
@@ -205,10 +199,11 @@
 .reminder-app .reminder-list .reminder-list-component .reminder .reminder-button button {
   height: 25px;
   width: 25px;
-  background: linear-gradient(47deg, #0f2027 19.11%, #203a43 51.09%, #2c5364 96.17%);
-  color: #e1e1e1;
+  background: #6f8eda;
+  color: #3d4a68;
   border: none;
   outline: none;
-  border: 1px solid #6F8EDA;
+  border: 1px solid #6f8eda;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=ReminderComponent.css.map */

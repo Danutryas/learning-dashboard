@@ -12,7 +12,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #e1e1e1;
+  border: 2px solid #6f8eda;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -54,11 +54,15 @@
 }
 
 .music-page .songs .song .m-button button {
-  height: 25px;
-  width: 25px;
-  border-radius: 4px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   outline: none;
   border: none;
-  background-color: #6F8EDA;
+  background-color: #6f8eda;
+}
+
+.music-page .songs .song .m-button button:active {
+  background-color: #6f8eda;
 }
 /*# sourceMappingURL=MusicComponent.css.map */

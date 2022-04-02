@@ -1,5 +1,3 @@
-import { faTasks } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import TaskBuilder from "./TaskBuilder";
 
@@ -46,10 +44,6 @@ function AssignmentTasks({ setSubTask, subTask }) {
         <div className="add-task">
           <button onClick={addInputHandler}>Add Tasks</button>
         </div>
-        <button className="pomodoro-link">
-          <FontAwesomeIcon icon={faTasks} />
-          Add Pomodoro
-        </button>
       </div>
     </div>
   );
