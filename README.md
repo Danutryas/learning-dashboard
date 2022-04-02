@@ -1,4 +1,4 @@
-# Learing Dashboard
+# Learning Dashboard
 
 ## Feature
 In this Project, Here's what I build :
