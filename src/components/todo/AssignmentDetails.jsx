@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import {
-  BsCheck2Square,
   BsCalendarDate,
   BsLink45Deg,
 } from "react-icons/bs";

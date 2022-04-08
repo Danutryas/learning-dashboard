@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { faTasks } from "@fortawesome/free-solid-svg-icons";
 import AssignmentTodoForm from "./AssignmentTodoForm";
 import EventTodoForm from "./EventTodoForm";
 import TodoShowDetail from "../todo/TodoShowDetail";

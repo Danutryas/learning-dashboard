@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { faTasks } from "@fortawesome/free-solid-svg-icons";
 import { BsListUl } from "react-icons/bs";
 import { IconContext } from "react-icons";
 
