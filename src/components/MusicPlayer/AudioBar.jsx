@@ -5,7 +5,6 @@ function AudioBar({
   currentSongIndex,
   audioEl,
   isPlaying,
-  setCurrentSongIndex,
   skipSong,
 }) {
   const [playSecond, setPlaySecond] = useState(0);

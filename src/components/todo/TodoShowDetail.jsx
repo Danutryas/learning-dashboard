@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTasks } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { IconContext } from "react-icons";
 import {
   BsCheck2Square,

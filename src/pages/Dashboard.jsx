@@ -40,15 +40,9 @@ const DashboardPage = () => {
     SetFullDashboard((prev) => !prev);
   };
 
-  useEffect(() => {
-    localGet();
-  }, [setReminders]);
 
   useEffect(() => {
     // filterHandler();
-    // saveLocalTodos();
-    localStorage.setItem("todos", JSON.stringify(todos));
-    localStorage.setItem("reminders", JSON.stringify(reminders));
     setFilteredReminders(reminders.filter((el) => el.completed === false));
     // filter todo
     switch (status) {
@@ -63,20 +57,7 @@ const DashboardPage = () => {
     }
   }, [todos, status, reminders, setFilteredReminders]);
 
-  const localGet = () => {
-    if (localStorage.getItem("todos") === null) {
-      localStorage.setItem("todos", JSON.stringify([]));
-    } else {
-      let todoLocal = JSON.parse(localStorage.getItem("todos"));
-      setTodos(todoLocal);
-    }
-    if (localStorage.getItem("reminders") === null) {
-      localStorage.setItem("reminders", JSON.stringify([]));
-    } else {
-      let reminderLocal = JSON.parse(localStorage.getItem("reminders"));
-      setReminders(reminderLocal);
-    }
-  };
+
 
   // music
 
